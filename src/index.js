@@ -1,8 +1,8 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-
-let saludo = <h1>Hola mundo react</h1>;
+import PrimeraApp from './PrimeraApp';
+import './index.css'
 
 const divRoot = document.querySelector('#root');
 
-ReactDOM.render(saludo,divRoot);
+ReactDOM.render( <PrimeraApp />  ,divRoot);
