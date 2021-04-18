@@ -1,15 +1,20 @@
 import React, { Fragment } from 'react';
-
+import PropTypes from 'prop-types';
 
 // Funsional components
-const PrimeraApp = ( { saludo = 'Sin contenido' } ) => {
+const PrimeraApp = ( { saludo } ) => {
     
     return (
         <>
-            <h1>Extrayendo datos de props</h1>
+            <h1>PropTypes</h1>
             <h3> { saludo } </h3>
         </>
     );
+}
+
+// Código para obligar el envio de parametros "required"
+PrimeraApp.propTypes = {
+    saludo: PropTypes.string.isRequired
 }
 
 export default PrimeraApp;
