@@ -1,7 +1,6 @@
-import { heroes } from './data/heroes';
+import heroes from '../data/heroes';
 
-const getHeroeById = id => heroes.find( item => item.id === id ) ? true : false
-console.log(getHeroeById(2));
+export const getHeroeById = id => heroes.find( item => item.id === id )
 
-const getHeroeByOwner = owner => heroes.filter( item => item.owner === owner )
-console.log(getHeroeByOwner('DC'));
+export const getHeroeByOwner = owner => heroes.filter( item => item.owner === owner )
+ 
