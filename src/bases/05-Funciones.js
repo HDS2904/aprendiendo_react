@@ -15,6 +15,7 @@
     const getAge = (age) => {
         return `Tengo ${age} años`
     }
-    const getUserName = (userName) => `Me llaman ${userName}`
+    
+    export const getUserAct = (userName) => ({ id: 123, name: userName })
 
-    const myObject = () => ({ uid: 1, name: 'jonathan'})
+    export const myObject = () => ({ uid: 1, name: 'jonathan'})
