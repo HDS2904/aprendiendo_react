@@ -7,8 +7,8 @@ const PrimeraApp = ( { saludo, subtitulo } ) => {
     return (
         <>
             <h1>PropTypes</h1>
-            <h3> { saludo } </h3>
-            <h3> { subtitulo } </h3>
+            <h3>{ saludo }</h3>
+            <p>{ subtitulo }</p>
         </>
     );
 }
