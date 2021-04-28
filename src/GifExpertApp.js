@@ -5,14 +5,10 @@ const GifExpertApp = () => {
 
     const [ categories, setCategories ] = useState(['Dragon Ball', 'Shaman King', 'One piece']);
 
-    // const handleAdd = () => {
-    //     setCategories( item => [...categories, 'Lost canvas' ] )
-    // }
-
     return (
         <div>
             <h2>GifExpertApp</h2>
-            <CategoryAdd/>
+            <CategoryAdd setCategories={setCategories} />
 
             <hr/>
 
