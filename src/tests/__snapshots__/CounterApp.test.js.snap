@@ -1,0 +1,28 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Prueba del componente CounterApp El componente debe tener una estructura HTML correcta 1`] = `
+<Fragment>
+  <h1>
+    CounterApp
+  </h1>
+  <h2>
+     
+     
+  </h2>
+  <button
+    onClick={[Function]}
+  >
+     +1 
+  </button>
+  <button
+    onClick={[Function]}
+  >
+     reset 
+  </button>
+  <button
+    onClick={[Function]}
+  >
+     -1 
+  </button>
+</Fragment>
+`;
