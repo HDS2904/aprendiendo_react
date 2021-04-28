@@ -3,15 +3,32 @@ import { shallow } from 'enzyme';
 import CounterApp from '../CounterApp';
 
 describe('Prueba del componente CounterApp', () => {
+    let wrapper = shallow( <CounterApp /> );
+
+    beforeEach( () => {
+        wrapper = shallow( <CounterApp /> );
+    })
+
+    // Prueba 1 del contenido del componente
     test('El componente debe tener una estructura HTML correcta', () => {
-        const wrapper = shallow( <CounterApp /> )
         expect( wrapper ).toMatchSnapshot()
     })
-    test('Compoenete debe retornar la linea evaluada segun el valor enviado 100', () => {
-        const lineEval = shallow( <CounterApp value={ 100 } /> )
-        const line = lineEval.find('h2').text().trim()
+    //Prueba d2 del contenido de la variable al inicio
+    test('Compoenete debe retornar la linea evaluada segun el valor enviado por defecto 100', () => {
+        const wrapper = shallow( <CounterApp value={ 100 } /> )
+        const line = wrapper.find('h2').text().trim()
         expect( line ).toBe( '100' )
     })
-    
-    
+    //Prueba del evento click en +1
+    test('Compoenete debe incrementar el valor +1 segun el evento click', () => {
+        wrapper.find('button').at(0).simulate('click')
+        const line = wrapper.find('h2').text().trim()
+        expect( line ).toBe( '1' )
+    })
+    //Prueba del evento click en -1
+    test('Compoenete debe reducir el valor -1 segun el evento click', () => {
+        wrapper.find('button').at(2).simulate('click')
+        const line = wrapper.find('h2').text().trim()
+        expect( line ).toBe( '-1' )
+    })
 })

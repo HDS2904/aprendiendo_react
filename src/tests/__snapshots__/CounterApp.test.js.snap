@@ -7,22 +7,23 @@ exports[`Prueba del componente CounterApp El componente debe tener una estructur
   </h1>
   <h2>
      
+    0
      
   </h2>
   <button
     onClick={[Function]}
   >
-     +1 
+    +1
   </button>
   <button
     onClick={[Function]}
   >
-     reset 
+    reset
   </button>
   <button
     onClick={[Function]}
   >
-     -1 
+    -1
   </button>
 </Fragment>
 `;
