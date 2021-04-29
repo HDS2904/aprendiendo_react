@@ -13,7 +13,7 @@ export const CategoryAdd = ({setCategories}) => {
         e.preventDefault(); // Elimina la acción por defecto del tag form
 
         if ( inputValue.trim().length > 1){
-            setCategories( cats => [...cats, inputValue]) // Permite agregar nuevo valor sin necesidad de mandar categorias del otro componente
+            setCategories( cats => [ inputValue, ...cats ]) // Permite agregar nuevo valor sin necesidad de mandar categorias del otro componente
             setInputValue('')   // Limpia el input
         }
 
