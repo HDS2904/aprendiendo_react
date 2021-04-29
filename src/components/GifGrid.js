@@ -25,9 +25,9 @@ export const GifGrid = ({category}) => {
 
 
     return (
-        <li>
-            <h2>{category}</h2>
-            <ol>
+        < >
+            <h3>{category}</h3>
+            <div className="container">
                 {
                     images.map( ( {id, ...image} ) => {
                         return <GifGridItem 
@@ -36,7 +36,7 @@ export const GifGrid = ({category}) => {
                         />
                     })
                 }
-            </ol>
-        </li>
+            </div>
+        </>
     )
 }
