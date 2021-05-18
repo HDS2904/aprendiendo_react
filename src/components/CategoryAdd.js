@@ -10,13 +10,11 @@ export const CategoryAdd = ({setCategories}) => {
     }
 
     const handleSubmit = (e) => {
-        e.preventDefault(); // Elimina la acción por defecto del tag form
-
+        e.preventDefault(); // Elimina la acción por defecto del tag form (envio del evento por default)
         if ( inputValue.trim().length > 1){
             setCategories( cats => [ inputValue, ...cats ]) // Permite agregar nuevo valor sin necesidad de mandar categorias del otro componente
             setInputValue('')   // Limpia el input
         }
-
     }
 
     return (

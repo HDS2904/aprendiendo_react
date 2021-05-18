@@ -3,8 +3,13 @@ import { CategoryAdd } from "../../components/CategoryAdd"
 
 describe('Pruebas del componente CategoryAdd.js', () => {
 
-  const setCategory = () => {}
-  const wrapper = shallow( <CategoryAdd setCategory={setCategory} /> )
+  const setCategory = jest.fn()
+  let wrapper = shallow( <CategoryAdd setCategory={setCategory} /> )
+  
+  beforeEach( () => {
+    jest.clearAllMocks()
+    wrapper = shallow( <CategoryAdd setCategory={setCategory} /> )
+  }) 
 
   test('Retorna la estructura HTML correcta del compoente', () => {
     expect( wrapper ).toMatchSnapshot()
@@ -17,4 +22,9 @@ describe('Pruebas del componente CategoryAdd.js', () => {
     expect( wrapper.find('p').text().trim() ).toBe( textValue )
   })
 
+  test('No debe ejecutar la función submit', () => {
+    wrapper.find('form').simulate('submit', { preventDefault(){} })
+    expect( setCategory ).not.toHaveBeenCalled()
+  })
+  
 })
