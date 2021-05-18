@@ -3,9 +3,12 @@ import { GifGridItem } from "../../components/GifGridItem";
 
 describe('Prueba del componente GifGridItem', () => {
     
-    test('Retorna codigo HTML correctamente', () => {
-      const wrapper = shallow( <GifGridItem /> )
-        expect( wrapper ).toMatchSnapshot()
-    })
-    
+  const title = 'Animes temporada'
+  const url = 'https://hdsdevelop.com.pe'
+  
+  test('Retorna codigo HTML correctamente', () => {
+    const wrapper = shallow( <GifGridItem title={title} url={url} /> )
+      expect( wrapper ).toMatchSnapshot()
+  })
+
 })

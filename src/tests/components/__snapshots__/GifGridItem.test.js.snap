@@ -5,10 +5,14 @@ exports[`Prueba del componente GifGridItem Retorna codigo HTML correctamente 1`]
   className="card animate__animated animate__backInRight"
 >
   <img
+    alt="Animes temporada"
     className="card__img"
+    src="https://hdsdevelop.com.pe"
   />
   <p
     className="card__title"
-  />
+  >
+    Animes temporada
+  </p>
 </div>
 `;
