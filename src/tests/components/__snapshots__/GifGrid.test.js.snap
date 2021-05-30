@@ -1,0 +1,32 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Prueba del componente GifGrid Evaluación del contenido del componente 1`] = `
+<Fragment>
+  <h3>
+    One piece
+  </h3>
+  <p>
+    LOADING...
+  </p>
+  <div
+    className="container"
+  />
+</Fragment>
+`;
+
+exports[`Prueba del componente GifGrid Retorna los items cuando se carga las imagenes de useFetchGifs 1`] = `
+<Fragment>
+  <h3>
+    One piece
+  </h3>
+  <div
+    className="container"
+  >
+    <GifGridItem
+      key="ABC"
+      title="lo que sea"
+      url="hhtp://jonathan-hds.com.pe"
+    />
+  </div>
+</Fragment>
+`;
