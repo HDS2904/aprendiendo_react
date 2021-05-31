@@ -21,14 +21,20 @@ describe('Prueba del componente GifGrid', () => {
       id: 'ABC',
       url: 'hhtp://jonathan-hds.com.pe',
       title: 'lo que sea'
+    },
+    {
+      id: '123',
+      url: 'hhtp://jonathan-hds.com.pe',
+      title: 'lo que sea'
     }]
     useFetchGifs.mockReturnValue({
       loading: false,
       data: gifs
     })
     const wrapper = shallow( <GifGrid category={category} /> )
-    expect( wrapper ).toMatchSnapshot()
-
+    // expect( wrapper ).toMatchSnapshot()
+    expect( wrapper.find('p').exists() ).toBe( false )
+    expect( wrapper.find('GifGridItem').length ).toBe( gifs.length )
     
   })
   
