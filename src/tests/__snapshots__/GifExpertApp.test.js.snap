@@ -1,0 +1,14 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Pruebas en el componente GifExpertApp Evalua si la estructura del componente es igual que la plantilla 1`] = `
+<Fragment>
+  <h2>
+    GifExpertApp
+  </h2>
+  <CategoryAdd
+    setCategories={[Function]}
+  />
+  <hr />
+  <ul />
+</Fragment>
+`;

@@ -2,9 +2,9 @@ import React, { useState } from 'react'
 import { CategoryAdd } from './components/CategoryAdd';
 import { GifGrid } from './components/GifGrid';
 
-const GifExpertApp = () => {
+const GifExpertApp = ({ defaultCategories = [] }) => {
 
-    const [ categories, setCategories ] = useState(['One piece']);
+    const [ categories, setCategories ] = useState( defaultCategories );
 
     return (
         <>
