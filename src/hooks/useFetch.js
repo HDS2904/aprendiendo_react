@@ -1,27 +1,28 @@
-import { useEffect, useState } from "react"
+import { useEffect, useRef, useState } from "react"
 
 
 export const useFetch = (url) => {
-
-	const [state, setState] = useState({
-		data: null,
-		loading: true,
-		error: null
-	})
+	const isMounted = useRef(true);
+	const [state, setState] = useState({ data: null, loading: true, error: null	});
 
 	useEffect(() => {
-		setState({
-			data: null,
-			loading: true,
-			error: null
-		})
+		return () => {
+			isMounted.current = false;
+		}
+	}, [])
+	
+
+	useEffect(() => {
+		setState({ data: null, loading: true, error: null	})
 		fetch(url)
 			.then(resp => resp.json())
-			.then(data => setState({
-					error: null,
-					loading: false,
-					data,
-			}));
+			.then(data => {
+				if(isMounted.current){
+					setState({ error: null, loading: false, data	})
+				} else {
+					console.log("Consulta Cancelada");
+				}
+			});
 	}, [url])
 	
 
