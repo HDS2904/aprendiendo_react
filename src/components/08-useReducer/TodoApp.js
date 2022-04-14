@@ -25,9 +25,10 @@ export const TodoApp = () => {
 	
 	
 	const handleSubmit = (e) => {
+
 		e.preventDefault();
 		console.log(e);
-		if(e.description.trim().length <= 0){
+		if(e.description?.trim().length <= 0){
 			return;
 		}
 
@@ -46,6 +47,17 @@ export const TodoApp = () => {
 		reset();
 	}
 
+	const handleDelete = (id) => {
+		
+		console.log("id: ", id)
+		const action = {
+			type: 'delete',
+			payload: id
+		}
+
+		dispatch(action)
+	}
+
 	return (
 		<div>
 			<h1>TodoApp ({todos.length}) </h1>
@@ -62,6 +74,7 @@ export const TodoApp = () => {
 									<p> { index + 1 }. { todo.desc } </p>
 									<button
 										className='btn btn-danger'
+										onClick={()=> {handleDelete(todo.id)}}
 									>
 										Borrar
 									</button>
