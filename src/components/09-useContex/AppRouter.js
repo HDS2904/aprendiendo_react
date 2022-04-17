@@ -7,11 +7,13 @@ import {
 import { AboutScreen } from "./AboutScreen";
 import { HomeScreen } from "./HomeScreen";
 import { LoginScreen } from "./LoginScreen";
+import { NavBar } from "./NavBar";
 
 export const AppRouter = () => {
 	return (
 		<Router>
 			<div>
+				<NavBar/>
 
 				<Routes>
 					<Route path="/" element={<HomeScreen/>} />
