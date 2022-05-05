@@ -1,0 +1,22 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Pruebas en <TodoListItem /> Deberia de mostrarse correctamente 1`] = `
+<div>
+  <li
+    class="list-group-item"
+  >
+    <p
+      class="false"
+    >
+      1
+      . 
+      Aprendiendo Node.js
+    </p>
+    <button
+      class="btn btn-danger"
+    >
+      Borrar
+    </button>
+  </li>
+</div>
+`;
