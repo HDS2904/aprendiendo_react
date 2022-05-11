@@ -16,7 +16,10 @@ export const TodoApp = () => {
 	}, [todos])
 
 	const handleAdd = (newTodo) => {
-		dispatch(newTodo);
+		dispatch({
+			type: 'add',
+			payload: newTodo
+		});
 	}
 
 	const handleDelete = (id) => {

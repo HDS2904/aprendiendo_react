@@ -7,7 +7,7 @@ export const TodoAdd = ( { handleAdd } ) => {
 	const handleSubmit = (e) => {
 		e.preventDefault();
 
-		if(e.description?.trim().length <= 0){
+		if(description?.trim().length <= 0){
 			return;
 		}
 
@@ -17,13 +17,8 @@ export const TodoAdd = ( { handleAdd } ) => {
 			done: false
 		}
 
-		const action = {
-			type: 'add',
-			payload: newTodo
-		}
-
-		handleAdd(action)
-		reset();
+		handleAdd(newTodo)
+		// reset();
 	}
 
 	return (
