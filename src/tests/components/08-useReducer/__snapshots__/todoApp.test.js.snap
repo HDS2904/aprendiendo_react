@@ -1,0 +1,49 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Pruebas en <TodoApp/> Debe de mostrarse correctamente 1`] = `
+<div>
+  <div>
+    <h1>
+      TodoApp (
+      0
+      ) 
+    </h1>
+    <hr />
+    <div
+      class="row"
+    >
+      <div
+        class="col-7"
+      >
+        <ul
+          class="list-group list-group-flush"
+        />
+      </div>
+      <div
+        class="col-5"
+      >
+        <h4>
+          Agregar TODO
+        </h4>
+        <hr />
+        <form>
+          <input
+            autocomplete="off"
+            class="form-control"
+            name="description"
+            placeholder="Actividad..."
+            type="text"
+            value=""
+          />
+          <button
+            class="btn btn-outline-primary mt-3 btn-block"
+            type="submit"
+          >
+            Agregar
+          </button>
+        </form>
+      </div>
+    </div>
+  </div>
+</div>
+`;
