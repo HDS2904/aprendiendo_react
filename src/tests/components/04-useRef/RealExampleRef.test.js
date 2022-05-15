@@ -21,7 +21,7 @@ describe('Prueba en <RealExampleRef />>', () => {
 		fireEvent.click(button)
 		// wrapper.queryByText( 'BreakingBad Quotes' ) // prueba suficiente para saber si existe
 		expect( !!wrapper.queryByText( 'BreakingBad Quotes' ) ).toBe( true )
-		wrapper.debug()
+		
 	})
 
 })
